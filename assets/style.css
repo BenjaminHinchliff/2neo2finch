@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+.header {
+  position: relative;
+  background-color: #f97316;
+  border-radius: .25rem;
+  z-index: -1000;
+}
+
+.header::before {
+  content: "";
+  background-image: url("img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0rem;
+  right: 0;
+  bottom: -2.5rem;
+  left: 0;
+  z-index: -999;
+  opacity: 0.3;
+}
+
+#name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin: 0;
+}
