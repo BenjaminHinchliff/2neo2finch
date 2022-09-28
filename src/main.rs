@@ -1,5 +1,6 @@
 mod header;
 mod repository;
+mod loader;
 
 use gloo_net::http::Request;
 use header::Header;

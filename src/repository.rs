@@ -1,3 +1,4 @@
+use crate::loader::Loader;
 use serde::Deserialize;
 use yew::prelude::*;
 
@@ -35,11 +36,15 @@ pub struct RepoListProps {
 pub fn repo_list(RepoListProps { repos }: &RepoListProps) -> Html {
     html! {
         <div>
-            { for repos.iter().map(|repo| {
-                html! {
-                    <RepoInfo repo={repo.clone()} />
-                }
-            }) }
+            if repos.is_empty() {
+                <Loader />
+            } else {
+                { for repos.iter().map(|repo| {
+                    html! {
+                        <RepoInfo repo={repo.clone()} />
+                    }
+                }) }
+            }
         </div>
     }
 }
