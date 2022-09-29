@@ -35,7 +35,7 @@ pub struct RepoListProps {
 #[function_component(RepoList)]
 pub fn repo_list(RepoListProps { repos }: &RepoListProps) -> Html {
     html! {
-        <div>            
+        <div>
             if repos.is_empty() {
                 <Loader />
             } else {
