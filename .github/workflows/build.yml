@@ -43,5 +43,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "dist/*"
-        target: "/var/www/"
+        source: "dist"
+        target: "/var/www"
