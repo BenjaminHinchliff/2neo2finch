@@ -10,3 +10,7 @@ gloo-net = "0.2.4"
 serde = { version = "1.0.145", features = ["derive"] }
 wasm-bindgen-futures = "0.4.33"
 yew = "0.19.3"
+
+[profile.release]
+lto = true
+opt-level = "s"
