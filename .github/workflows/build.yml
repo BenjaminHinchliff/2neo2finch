@@ -26,10 +26,8 @@ jobs:
       uses: jetli/trunk-action@v0.1.0
     - name: Build
       run: trunk build --release
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.2.3
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
       with:
-        publish-dir: dist
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        name: build
+        path: dist/
