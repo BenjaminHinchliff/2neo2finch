@@ -37,16 +37,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "finch-yew"
-version = "0.1.0"
-dependencies = [
- "gloo-net",
- "serde",
- "wasm-bindgen-futures",
- "yew",
-]
-
-[[package]]
 name = "futures-channel"
 version = "0.3.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -391,6 +381,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "twoneo2finch"
+version = "0.1.0"
+dependencies = [
+ "gloo-net",
+ "serde",
+ "wasm-bindgen-futures",
+ "yew",
 ]
 
 [[package]]
