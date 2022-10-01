@@ -11,11 +11,21 @@
   margin: 0.1rem 0;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  
+  &:hover {
+    background-color: #d0d0d0;
+    transition: background-color 0.25s ease 0s;
+  }
 }
 
-.repo a:hover {
-  background-color: #d0d0d0;
-  transition: background-color 0.25s ease 0s;
+@media (prefers-color-scheme: dark) {
+  .repo a {
+    color: #e2e2e2;
+    
+    &:hover {
+      background-color: #202020;
+    }
+  }
 }
 
 .repo .repo-name {
