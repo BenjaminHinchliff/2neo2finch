@@ -1,64 +1,11 @@
 @use 'lds-heart';
+@use 'container';
+@use 'header';
+@use 'repo';
 
 body {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.header {
-  position: relative;
-  background-color: #f97316;
-  border-radius: 0.25rem;
-  z-index: -1000;
-}
-
-.header::before {
-  content: "";
-  background-image: url("img/logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: -2.5rem;
-  left: 0;
-  z-index: -999;
-  opacity: 0.3;
 }
 
 h1, h2, p {
@@ -73,46 +20,6 @@ h1, h2, p {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-}
-
-#name {
-  font-size: 3.75rem;
-  font-weight: 300;
-  text-align: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin: 0;
-}
-
-.repo {
-  border-bottom: 1px solid #9ca3af;
-  padding: 0.3rem 0.1rem;
-}
-
-.repo a {
-  display: block;
-  max-width: 100%;
-  text-decoration: none;
-  color: black;
-  margin: 0.1rem 0;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.repo a:hover {
-  background-color: #d0d0d0;
-  transition: background-color 0.25s ease 0s;
-}
-
-.repo .repo-name {
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin: 0;
-  margin-bottom: 0.5rem;
-}
-
-.repo .repo-desc {
-  margin: 0;
 }
 
 .error {
