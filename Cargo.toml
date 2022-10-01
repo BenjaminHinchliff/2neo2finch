@@ -13,5 +13,7 @@ wasm-bindgen-futures = "0.4.33"
 yew = "0.19.3"
 
 [profile.release]
-lto = true
+panic = 'abort'
+codegen-units = 1
 opt-level = "s"
+lto = true
