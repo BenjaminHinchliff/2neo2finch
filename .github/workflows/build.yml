@@ -36,6 +36,16 @@ jobs:
       uses: jetli/trunk-action@v0.1.0
     - name: Build
       run: trunk build --release
+    - name: Upload Build
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: dist
+        path: dist/*
+  deploy:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
     - name: Copy Dist over SSH
       uses: appleboy/scp-action@master
       with:
@@ -45,3 +55,4 @@ jobs:
         source: "dist"
         target: "/var/www"
         rm: true
+
